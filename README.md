@@ -1,10 +1,12 @@
 # Conscript 数据库初始化工具
 
+> Conscript 取自 “红警”苏军阵营最基本的作战单位—动员兵，就像步兵是作战中最基础的战力一样， 初始数据库也是大多数程序要做的第一件事，也是最基础的事
+
 ## 1.相关代码结构
 
 ```shell
 
-+---initdb                                        #基础功能包 
++---conscript                                     #基础功能包 
 |   +---entity						              #配置实体类
 |   +---enumerate						       #数据库类型枚举	 
 |   +---mysql                                 #mysql数据库实现
@@ -62,9 +64,9 @@ DbConConfiguration <.. DataBaseInitorFactory
 initDataBase -- DataBaseInitorFactory
 ```
 
-扩展其他类型数据库：可以继承AbstractInitDataBase类，实现对应的几个数据库操作方法，在DbType中追加对应扩展的类
+> **扩展其他类型数据库：可以继承AbstractInitDataBase类，实现对应的几个数据库操作方法，在DbType中追加对应扩展的类**
 
-## 3.使用方式
+##3.使用方式
 
 ### 1.引入Conscript
 
@@ -80,9 +82,11 @@ initDataBase -- DataBaseInitorFactory
 
 1.2.引入源码
 
-​	将com.gcc.initdb目录下的initdb包拷至代码中即可
+​	将conscript.jar导入项目中即可
 
 ### 2.建立SQL文件存放目录
+
+> 以标准maven项目为例
 
 ​	1.在resource目录下新建sql目录，里面存放需要升级的sql文件
 
@@ -152,4 +156,3 @@ public static void main(String args[]){
 
 }
 ```
-
