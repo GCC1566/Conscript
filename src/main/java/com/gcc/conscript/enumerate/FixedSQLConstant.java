@@ -2,6 +2,7 @@ package com.gcc.conscript.enumerate;
 
 /**
  * 数据库基础结构
+ * @author GCC
  */
 public class FixedSQLConstant {
 
